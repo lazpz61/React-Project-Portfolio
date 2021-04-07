@@ -56,7 +56,6 @@ export default class App extends Component {
         withCredentials: true
       })
       .then(response => {
-        console.log("this is the response", response);
         const loggedIn = response.data.logged_in;
         const loggedInStatus = this.state.loggedInStatus;
 
@@ -91,17 +90,18 @@ export default class App extends Component {
     path="/portfolio-manager" component={PortfolioManager} />
   ];
   }
-
+debugger;
   render() {
     return (
       <div className="container">
+        
         <Router>
           <div>
             <NavigationContainer 
             loggedInStatus={this.state.loggedInStatus}
             handleSuccessfulLogout={this.handleSuccessfulLogout}
             />
-
+          
             <Switch>
               <Route exact path="/" component={Home} />
 
@@ -119,7 +119,7 @@ export default class App extends Component {
               <Route path="/about-me" component={About} />
               
               <Route path="/contact" component={Contact} />
-
+              
               <Route path="/blog" component={Blog} />
               
               {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages(): null}
