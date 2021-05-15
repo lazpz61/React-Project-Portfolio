@@ -22,9 +22,21 @@ export default class BlogForm extends Component {
        this.componentConfig =  this.componentConfig.bind(this)
        this.djsConfig =this.djsConfig.bind(this);
        this.handleFeaturedImageDrop = this.handleFeaturedImageDrop.bind(this)
-
+       this.deleteImage = this.deleteImage.bind(this);
        this.featuredImageRef = React.createRef();
+       
    }
+
+   deleteImage(imageType) {
+    axios.delete(`https://api.devcamp.space/portfolio/delete-portfolio-blog-image/${this.props.blog.id}?image_type=${imageType}`, 
+    {withCredentials: true})
+    .then(response => {
+        this.props.handleFeaturedImageDelete();
+    })
+    .catch(error => {
+        console.log("delete Image error", error)
+    })
+}
 
    componentWillMount(){
        if (this.props.editMode) {
@@ -144,6 +156,19 @@ export default class BlogForm extends Component {
                 </div>
 
                 <div className="image-uploaders">
+                  {this.props.editMode && this.props.blog.featured_image_url ?
+
+                    <div className="portfolio-manager-image-wraper">   
+                    <img src={this.props.blog.featured_image_url} />
+
+                        <div className="image-removal-link">
+                            <a onClick={() => this.deleteImage("featured_image")}>Remove file</a>
+                        </div>
+                    </div>
+                  
+                  
+                  
+                  :
                     <DropzoneComponent
                     ref={this.featuredImageRef}
                     config={this.componentConfig()}
@@ -151,7 +176,7 @@ export default class BlogForm extends Component {
                     eventHandlers={this.handleFeaturedImageDrop()}
                     >
                         <div className="dz-message">Featured Image</div>
-                    </DropzoneComponent>
+                    </DropzoneComponent> }
                 </div>
              
                 <button className="btn">Save</button>

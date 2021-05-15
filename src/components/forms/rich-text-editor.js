@@ -36,7 +36,8 @@ export default class RichTextEditor extends Component {
     {editorState }, 
     this.props.handleRichTextEditorChange(
         draftToHtml(convertToRaw(this.state.editorState.getCurrentContent()))
-    ))
+        )
+    );
    }
 
    getBase64(file, callback) {
@@ -65,6 +66,7 @@ export default class RichTextEditor extends Component {
                     inline: { inDropdown: true},
                     list: { inDropdown: true},
                     textAlign: { inDropdown: true},
+                    link: { inDropdown: true},
                     history: { inDropdown: true},
                     image: { 
                         uploadCallback: this.uploadFile,
@@ -75,6 +77,6 @@ export default class RichTextEditor extends Component {
                }}
                />
            </div>
-       )
+       );
    }
 }
