@@ -2,9 +2,46 @@
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
+    height: calc(100vh - 83px);
 
     .right-column {
         background-color: blanchedalmond;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px;
+
+        .content-bullet-points {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 21px;
+
+            .bullet-point-group {
+                display: flex;
+                align-items: center;
+
+                .icon {
+                    font-size: 2em;
+                    color: $teal;
+                }
+
+                .text {
+                    font-size: 1.5em;
+                    font-weight: 900;
+                    margin-left: 21px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+                .svg-inline--fa.fa-w-10 {
+                    width: 0.925em;
+                }
+            }
+
+        }
+
     }
 }

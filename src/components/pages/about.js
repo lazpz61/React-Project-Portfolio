@@ -14,7 +14,18 @@ export default function() {
     }}
     />
     <div className="right-column">
-      Add a Bio so that you can add this to your portfolio
+    Hello there, you've discovered me on my profile and I welcome you in this brief about me.
+    Having experience in Financial Analysis, SaaS Business Development, and Entrepreneurship, 
+    these, amongst other variables, has driven me to you seeing me in this profile in pursuit of becoming a Junior Software Developer.
+    {<br></br>}
+    {<br></br>}
+    What enthuses me about software development is the ever-growing need for making the world a better place through solving modern day problems, 
+    through technology, that people face today. 
+    {<br></br>}
+    {<br></br>}
+    I currently hold a Bachelor’s Degree from the University of Massachusetts Amherst, with a concentration in Finance, and have recently 
+    received a certificate of competency from Bottega University in Full Stack Software Development. I love to draw, read books, and lift weights, and would
+    be delighted to share more about myself if you decide to bless me with a message and conection
     </div>
   </div>
   );
