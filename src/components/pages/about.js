@@ -24,8 +24,8 @@ export default function() {
     {<br></br>}
     {<br></br>}
     I currently hold a Bachelor’s Degree from the University of Massachusetts Amherst, with a concentration in Finance, and have recently 
-    received a certificate of competency from Bottega University in Full Stack Software Development. I love to draw, read books, and lift weights, and would
-    be delighted to share more about myself if you decide to bless me with a message and conection
+    received a certificate in in Full Stack Software Development from Bottega University. I love to draw, read books, and lift weights, and would
+    be delighted to share more about myself if you decide to bless me with a message and connection
     </div>
   </div>
   );
