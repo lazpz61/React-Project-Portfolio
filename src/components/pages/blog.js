@@ -94,8 +94,17 @@ class Blog extends Component {
 
   render() {
     const blogRecords = this.state.blogItems.map(blogItem => {
+      if (this.props.loggedInStatus === "LOGGED_IN") {
+          return (
+            <div className="admin-blog-wrapper">
+              
+            </div>
+          )
+      } else {
       return <BlogItem key={blogItem.id} blogItem={blogItem} />
+      }
     });
+  
   
     return (
       <div className="blog-container">
