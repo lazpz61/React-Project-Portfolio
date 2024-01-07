@@ -74,7 +74,7 @@ export default function() {
               </div>
               
               <div className="text">
-                  <a href="https://www.instagram.com/lazz_p_lifting/?hl=en" target="_blank" >Instagram</a>
+                  <a href="https://www.instagram.com/laz_lifting_life/" target="_blank" >Instagram</a>
               </div>
             </div>
 
